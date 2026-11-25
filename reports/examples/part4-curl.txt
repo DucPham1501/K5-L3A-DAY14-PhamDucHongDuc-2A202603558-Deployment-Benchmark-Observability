@@ -1,0 +1,35 @@
+API key missing
+HTTP/1.1 401 Unauthorized
+date: Wed, 25 Nov 2026 10:16:56 GMT
+server: uvicorn
+content-length: 67
+content-type: application/json
+
+{"detail":"Missing API key. Include header: X-API-Key: <your-key>"}
+
+API key valid
+HTTP/1.1 200 OK
+date: Wed, 25 Nov 2026 10:16:56 GMT
+server: uvicorn
+content-length: 145
+content-type: application/json
+
+{"question":"Hello","answer":"Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ OpenAI/Anthropic."}
+
+JWT rate limited
+HTTP/1.1 429 Too Many Requests
+date: Wed, 25 Nov 2026 10:17:07 GMT
+server: uvicorn
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 0
+x-ratelimit-reset: 1795601887
+retry-after: 59
+content-length: 98
+content-type: application/json
+vary: Origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+referrer-policy: strict-origin-when-cross-origin
+
+{"detail":{"error":"Rate limit exceeded","limit":10,"window_seconds":60,"retry_after_seconds":59}}

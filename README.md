@@ -1,5 +1,54 @@
 # Day 14 — Deployment, Benchmark & Observability
 
+## Tự kiểm tra bài làm — chạy để xem PASS/FAIL
+
+**Trên Windows, bật Docker Desktop và chạy các lệnh sau trong Ubuntu WSL2.** Không chạy checker bằng Python Windows vì bài kiểm tra SIGTERM cần Linux.
+
+Từ terminal Ubuntu, vào gốc repo:
+
+```bash
+cd /mnt/d/AIThucChien/LAB14/K5-L3A-DAY14-PhamDucHongDuc-2A202603558-Deployment-Benchmark-Observability
+```
+
+Môi trường `.venv` và dependencies đã được chuẩn bị trên máy làm bài này. Nếu clone mới, tạo môi trường và cài thư viện trước:
+
+```bash
+python3 -m venv .venv
+bash scripts/install_lab_dependencies.sh
+```
+
+Nếu Ubuntu báo thiếu module venv/ensurepip, cài gói `python3-venv` cho Python của Ubuntu rồi tạo lại môi trường. Kiểm tra Docker Desktop đã bật WSL integration bằng `docker version` (phải thấy cả Client và Server).
+
+**Chạy một lệnh để xem đầy đủ kết quả local:**
+
+```bash
+bash scripts/check_lab.sh
+```
+
+Lệnh lần lượt chạy checker Part 6 đầy đủ có Docker, quality gate Part 7 và kiểm tra file bằng chứng. Nó tự bật agent/Redis cần cho checker; bạn không cần bật app thủ công. Cổng 8002 phải trống để quality gate khởi động agent v2.
+
+| Bước | Kết quả cần thấy |
+|---|---|
+| Part 6 | `PASS 12/12`, tất cả tiêu chí ✅; kiểm tra cả runtime và Docker |
+| Quality gate | Accuracy `23/23`, không regression, `Quality gate ... PASS` |
+| Artifacts | `local_evidence_valid: true`; JSON/CSV/4 ảnh Part 7 đầy đủ; checker và dataset không bị sửa |
+| Tổng kết local | Ba dòng `PASS` và `LOCAL CHECKS PASS` |
+
+Log mới nằm trong `reports/checks/`, giữ riêng với bằng chứng gốc đã dùng viết báo cáo. Nếu có bước lỗi, script vẫn in kết quả các bước còn lại và kết thúc với exit code khác 0. Mục ⚠️ trong checker nghĩa là **chưa kiểm tra được**, không tính là đạt.
+
+Muốn chỉ kiểm tra **12 tiêu chí Part 6**, từ gốc repo chạy:
+
+```bash
+cd 06-lab-complete
+../.venv/bin/python check_production_ready.py
+```
+
+Lần kiểm tra đầy đủ đã thực hiện đạt **PASS 12/12 — 43/43 checks**; eval v2 sau sửa KB đạt **23/23, không regression**. Các số benchmark và bằng chứng ở [MISSION_ANSWERS.md](MISSION_ANSWERS.md), [BENCHMARK_REPORT.md](BENCHMARK_REPORT.md) và [reports/](reports/).
+
+**Phần cloud đã kiểm chứng riêng:** Railway đã deploy agent Part 6 cùng Redis tại https://agent-production-36599cd4.up.railway.app. Bốn kiểm tra HTTP public đều đạt: `/health` 200, `/ready` 200, `POST /ask` thiếu key 401, đúng key 200. Đã lưu đủ ba ảnh cloud trong `screenshots/`. Xem [hướng dẫn triển khai và ảnh bằng chứng](DEPLOYMENT.md) và [kết quả kiểm tra HTTP](reports/railway-http.json).
+
+---
+
 > Đưa agent lên cloud, đo xem nó nhanh và đúng tới đâu, rồi giám sát nó khi chạy thật.
 
 > **AICB-P1 · VinUniversity 2026**  

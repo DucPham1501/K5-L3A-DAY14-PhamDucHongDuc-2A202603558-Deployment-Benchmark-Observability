@@ -1,0 +1,15 @@
+{
+  "local_evidence_valid": true,
+  "benchmark_json_count": 10,
+  "eval_fixed": "23/23, no regression",
+  "readiness": "PASS 12/12",
+  "observability_screenshots": 4,
+  "protected_files_unchanged": true,
+  "credential_or_email_patterns_in_generated_text": false,
+  "cloud_deployment": "PENDING Railway authentication, deployment and public HTTP verification",
+  "missing_cloud_screenshots": [
+    "dashboard.png",
+    "running.png",
+    "test.png"
+  ]
+}

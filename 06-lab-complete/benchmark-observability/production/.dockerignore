@@ -1,11 +1,8 @@
-__pycache__/
-*.pyc
 .env
 .env.*
 !.env.example
-grafana/
-prometheus/
-nginx/
-locust/
+__pycache__/
+*.pyc
+.venv/
+venv/
 benchmark-results/
-*.md

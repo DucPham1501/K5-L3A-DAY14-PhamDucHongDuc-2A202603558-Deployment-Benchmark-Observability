@@ -1,0 +1,295 @@
+{
+  "ran_at_utc": "2026-11-25T09:41:41.614689+00:00",
+  "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+  "os_name": "posix",
+  "api_key": [
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 401,
+      "body": {
+        "detail": "Missing API key. Include header: X-API-Key: <your-key>"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Hello",
+        "answer": "Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ OpenAI/Anthropic."
+      }
+    }
+  ],
+  "jwt_login_status": 200,
+  "jwt_missing": {
+    "method": "POST",
+    "path": "/ask",
+    "status": 401,
+    "body": {
+      "detail": "Authentication required. Include: Authorization: Bearer <token>"
+    }
+  },
+  "burst": [
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.",
+        "usage": {
+          "requests_remaining": 9,
+          "budget_remaining_usd": 1.6e-05
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.",
+        "usage": {
+          "requests_remaining": 8,
+          "budget_remaining_usd": 3.3e-05
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.",
+        "usage": {
+          "requests_remaining": 7,
+          "budget_remaining_usd": 4.9e-05
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.",
+        "usage": {
+          "requests_remaining": 6,
+          "budget_remaining_usd": 6.6e-05
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ OpenAI/Anthropic.",
+        "usage": {
+          "requests_remaining": 5,
+          "budget_remaining_usd": 8.7e-05
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.",
+        "usage": {
+          "requests_remaining": 4,
+          "budget_remaining_usd": 0.000104
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.",
+        "usage": {
+          "requests_remaining": 3,
+          "budget_remaining_usd": 0.00012
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.",
+        "usage": {
+          "requests_remaining": 2,
+          "budget_remaining_usd": 0.000137
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Tôi là AI agent được deploy lên cloud. Câu hỏi của bạn đã được nhận.",
+        "usage": {
+          "requests_remaining": 1,
+          "budget_remaining_usd": 0.000156
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "Rate limit test",
+        "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé.",
+        "usage": {
+          "requests_remaining": 0,
+          "budget_remaining_usd": 0.000172
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 429,
+      "body": {
+        "detail": {
+          "error": "Rate limit exceeded",
+          "limit": 10,
+          "window_seconds": 60,
+          "retry_after_seconds": 59
+        }
+      }
+    }
+  ]
+}

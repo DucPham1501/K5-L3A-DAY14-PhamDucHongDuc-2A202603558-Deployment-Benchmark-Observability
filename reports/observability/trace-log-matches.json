@@ -1,0 +1,10 @@
+{
+  "slow": [
+    "{\"ts\": \"2026-11-25T10:18:20.128395+00:00\", \"level\": \"INFO\", \"service\": \"observable-agent\", \"instance\": \"7394878ee5bc\", \"event\": \"llm_call\", \"trace_id\": \"fee1e8565bce7338d14d7afaf32f398f\", \"span_id\": \"d4d73788d6e7a9bc\", \"request_id\": \"f93dfaa91882\", \"model\": \"mock-llm-small\", \"agent_version\": \"v2\", \"input_tokens\": 95, \"output_tokens\": 58, \"cost_usd\": 4.9e-05, \"llm_ms\": 1698.8}",
+    "{\"ts\": \"2026-11-25T10:18:20.129242+00:00\", \"level\": \"INFO\", \"service\": \"observable-agent\", \"instance\": \"7394878ee5bc\", \"event\": \"http_request\", \"trace_id\": \"fee1e8565bce7338d14d7afaf32f398f\", \"span_id\": \"d4d73788d6e7a9bc\", \"request_id\": \"f93dfaa91882\", \"method\": \"POST\", \"route\": \"/ask\", \"status\": 200, \"ms\": 1722.2}"
+  ],
+  "error": [
+    "{\"ts\": \"2026-11-25T10:19:47.307448+00:00\", \"level\": \"INFO\", \"service\": \"observable-agent\", \"instance\": \"b0f5bd096d03\", \"event\": \"llm_error\", \"trace_id\": \"e2af417e91429321570cbc1370096e4d\", \"span_id\": \"686c67dc95aaa748\", \"request_id\": \"15ce997340cd\", \"error\": \"Upstream LLM error: 503 Service Unavailable (mock)\"}",
+    "{\"ts\": \"2026-11-25T10:19:47.307748+00:00\", \"level\": \"INFO\", \"service\": \"observable-agent\", \"instance\": \"b0f5bd096d03\", \"event\": \"http_request\", \"trace_id\": \"e2af417e91429321570cbc1370096e4d\", \"span_id\": \"686c67dc95aaa748\", \"request_id\": \"15ce997340cd\", \"method\": \"POST\", \"route\": \"/ask\", \"status\": 503, \"ms\": 118.7}"
+  ]
+}

@@ -1,0 +1,4 @@
+{"Name":"k5-day14-docker-agent-1","Image":"k5-day14-docker-agent","State":"running","Health":"starting","Ports":"8000/tcp","Service":"agent"}
+{"Name":"k5-day14-docker-nginx-1","Image":"nginx:alpine","State":"running","Health":"","Ports":"0.0.0.0:80-\u003e80/tcp, [::]:80-\u003e80/tcp, 0.0.0.0:443-\u003e443/tcp, [::]:443-\u003e443/tcp","Service":"nginx"}
+{"Name":"k5-day14-docker-qdrant-1","Image":"qdrant/qdrant:v1.9.0","State":"running","Health":"healthy","Ports":"6333-6334/tcp","Service":"qdrant"}
+{"Name":"k5-day14-docker-redis-1","Image":"redis:7-alpine","State":"running","Health":"healthy","Ports":"6379/tcp","Service":"redis"}

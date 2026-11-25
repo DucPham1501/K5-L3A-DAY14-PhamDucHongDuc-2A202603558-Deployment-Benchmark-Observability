@@ -1,0 +1,81 @@
+{
+  "ran_at_utc": "2026-11-25T09:29:58.227909+00:00",
+  "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+  "os_name": "posix",
+  "develop": [
+    {
+      "method": "POST",
+      "path": "/ask?question=Hello",
+      "status": 200,
+      "body": {
+        "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé."
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 422,
+      "body": {
+        "detail": [
+          {
+            "type": "missing",
+            "loc": [
+              "query",
+              "question"
+            ],
+            "msg": "Field required",
+            "input": null
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 404,
+      "body": {
+        "detail": "Not Found"
+      }
+    }
+  ],
+  "production": [
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "uptime_seconds": 0.8,
+        "version": "1.0.0",
+        "environment": "staging",
+        "timestamp": "2026-11-25T09:30:07.468866+00:00"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ready",
+      "status": 200,
+      "body": {
+        "ready": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "body": {
+        "question": "What is deployment?",
+        "answer": "Deployment là quá trình đưa code từ máy bạn lên server để người khác dùng được.",
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "status": 422,
+      "body": {
+        "detail": "question field is required"
+      }
+    }
+  ]
+}

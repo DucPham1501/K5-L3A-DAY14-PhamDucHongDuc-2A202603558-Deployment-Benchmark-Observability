@@ -1,0 +1,96 @@
+{
+  "observed_at_utc": "2026-11-25T10:38:47.958742+00:00",
+  "replicas": 2,
+  "users": 30,
+  "ramp": 5,
+  "public_metrics": {
+    "method": "GET",
+    "path": "/metrics",
+    "status": 404,
+    "body": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.28.3</center>\r\n</body>\r\n</html>\r\n"
+  },
+  "queries": {
+    "p95_s": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {},
+            "value": [
+              1795603127.961,
+              "0.29321359653529483"
+            ]
+          }
+        ]
+      }
+    },
+    "avg_s": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {},
+            "value": [
+              1795603127.963,
+              "0.22969402905004166"
+            ]
+          }
+        ]
+      }
+    },
+    "requests_per_instance": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "instance": "172.21.0.9:8000"
+            },
+            "value": [
+              1795603127.965,
+              "8.605453717741112"
+            ]
+          },
+          {
+            "metric": {
+              "instance": "172.21.0.8:8000"
+            },
+            "value": [
+              1795603127.965,
+              "8.906287777704945"
+            ]
+          }
+        ]
+      }
+    },
+    "tokens_per_second": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "type": "input"
+            },
+            "value": [
+              1795603127.966,
+              "1389.663806849228"
+            ]
+          },
+          {
+            "metric": {
+              "type": "output"
+            },
+            "value": [
+              1795603127.966,
+              "751.3079341288324"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

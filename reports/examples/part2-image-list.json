@@ -1,0 +1,28 @@
+[
+  {
+    "Containers": "0",
+    "CreatedAt": "2026-11-25 16:33:57 +0700 +07",
+    "CreatedSince": "About an hour ago",
+    "Digest": "<none>",
+    "ID": "11742c76523a",
+    "Repository": "my-agent",
+    "SharedSize": "N/A",
+    "Size": "240MB",
+    "Tag": "advanced",
+    "UniqueSize": "N/A",
+    "VirtualSize": "239.8MB"
+  },
+  {
+    "Containers": "0",
+    "CreatedAt": "2026-11-25 16:33:06 +0700 +07",
+    "CreatedSince": "About an hour ago",
+    "Digest": "<none>",
+    "ID": "bb7f3b772138",
+    "Repository": "my-agent",
+    "SharedSize": "N/A",
+    "Size": "1.67GB",
+    "Tag": "develop",
+    "UniqueSize": "N/A",
+    "VirtualSize": "1.668GB"
+  }
+]

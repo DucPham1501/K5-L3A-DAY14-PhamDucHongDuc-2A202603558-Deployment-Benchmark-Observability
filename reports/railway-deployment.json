@@ -1,0 +1,21 @@
+{
+    "checked_at_utc":  "2026-11-25T12:47:56.8928505Z",
+    "platform":  "Railway",
+    "cli_version":  "5.75.0",
+    "authentication":  "confirmed",
+    "project_name":  "day14-agent-observability",
+    "project_id":  "670dfe1d-cca8-4898-8380-c0c34c15f7e9",
+    "agent_service_id":  "f955554d-1742-4e9d-9eb5-1f28d9b33cf3",
+    "redis_service_id":  "f687e1ce-49c5-44c4-b8be-0d0ca1e3127a",
+    "deployment_id":  "35964e95-07df-41cf-8756-130537effcce",
+    "status":  "DEPLOYED_VERIFIED",
+    "detail":  "Agent Part 6 and Redis deployed successfully; public HTTP checks passed 200/200/401/200.",
+    "project_created":  true,
+    "agent_deployed":  true,
+    "redis_created":  true,
+    "public_url_verified":  true,
+    "public_url":  "https://agent-production-36599cd4.up.railway.app",
+    "target_port":  8080,
+    "http_evidence":  "reports/railway-http.json",
+    "paid_plan_activated_by_agent":  false
+}

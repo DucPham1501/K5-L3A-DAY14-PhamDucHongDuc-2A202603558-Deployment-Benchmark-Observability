@@ -13,6 +13,10 @@ __pycache__/
 venv/
 env/
 .venv/
+.tools/
+reports/
+screenshots/
+benchmark-results/
 
 # IDE
 .vscode/

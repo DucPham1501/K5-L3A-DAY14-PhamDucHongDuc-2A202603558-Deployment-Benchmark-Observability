@@ -1,0 +1,12 @@
+{
+  "configuration": {
+    "AGENT_VERSION": "v2",
+    "LLM_MODEL": "mock-llm-small",
+    "MOCK_ERROR_RATE": "0.01",
+    "MOCK_SLOW_RATE": "0.03"
+  },
+  "users": 100,
+  "ramp_up": 10,
+  "duration_per_run": "2m",
+  "ran_at_utc": "2026-11-25T10:12:39.217701+00:00"
+}

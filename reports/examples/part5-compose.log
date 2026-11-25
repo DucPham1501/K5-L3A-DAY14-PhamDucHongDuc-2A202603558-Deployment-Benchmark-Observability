@@ -1,0 +1,50 @@
+agent-2  | ✅ Connected to Redis
+agent-2  | INFO:     Started server process [1]
+agent-2  | INFO:     Waiting for application startup.
+agent-2  | INFO:app:Starting instance instance-57b390
+agent-2  | INFO:app:Storage: Redis ✅
+agent-2  | INFO:     Application startup complete.
+agent-2  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+agent-2  | INFO:     172.21.0.6:55988 - "GET /health HTTP/1.1" 200 OK
+agent-2  | INFO:     172.21.0.6:55988 - "POST /chat HTTP/1.1" 200 OK
+agent-2  | INFO:     172.21.0.6:55988 - "GET /chat/f96efeb4-7bc5-4c73-963b-04ca031661f3/history HTTP/1.1" 200 OK
+redis-1  | 1:C 25 Nov 2026 09:50:40.028 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 25 Nov 2026 09:50:40.028 * Redis version=7.4.12, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1  | 1:C 25 Nov 2026 09:50:40.028 * Configuration loaded
+redis-1  | 1:M 25 Nov 2026 09:50:40.029 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 25 Nov 2026 09:50:40.030 * Running mode=standalone, port=6379.
+redis-1  | 1:M 25 Nov 2026 09:50:40.031 * Server initialized
+redis-1  | 1:M 25 Nov 2026 09:50:40.031 * Ready to accept connections tcp
+nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1  | 172.21.0.1 - - [25/Nov/2026:09:50:55 +0000] "POST /chat HTTP/1.1" 200 241 "-" "Python-urllib/3.12"
+nginx-1  | 172.21.0.1 - - [25/Nov/2026:09:50:55 +0000] "POST /chat HTTP/1.1" 200 275 "-" "Python-urllib/3.12"
+nginx-1  | 172.21.0.1 - - [25/Nov/2026:09:50:55 +0000] "POST /chat HTTP/1.1" 200 245 "-" "Python-urllib/3.12"
+nginx-1  | 172.21.0.1 - - [25/Nov/2026:09:50:55 +0000] "POST /chat HTTP/1.1" 200 255 "-" "Python-urllib/3.12"
+nginx-1  | 172.21.0.1 - - [25/Nov/2026:09:50:55 +0000] "POST /chat HTTP/1.1" 200 241 "-" "Python-urllib/3.12"
+nginx-1  | 172.21.0.1 - - [25/Nov/2026:09:50:55 +0000] "GET /chat/f96efeb4-7bc5-4c73-963b-04ca031661f3/history HTTP/1.1" 200 1439 "-" "Python-urllib/3.12"
+agent-3  | ✅ Connected to Redis
+agent-3  | INFO:     Started server process [1]
+agent-3  | INFO:     Waiting for application startup.
+agent-3  | INFO:app:Starting instance instance-42784f
+agent-3  | INFO:app:Storage: Redis ✅
+agent-3  | INFO:     Application startup complete.
+agent-3  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+agent-3  | INFO:     172.21.0.6:42192 - "POST /chat HTTP/1.1" 200 OK
+agent-3  | INFO:     172.21.0.6:42192 - "POST /chat HTTP/1.1" 200 OK
+agent-1  | ✅ Connected to Redis
+agent-1  | INFO:     Started server process [1]
+agent-1  | INFO:     Waiting for application startup.
+agent-1  | INFO:app:Starting instance instance-9a5a7b
+agent-1  | INFO:app:Storage: Redis ✅
+agent-1  | INFO:     Application startup complete.
+agent-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+agent-1  | INFO:     172.21.0.6:44572 - "POST /chat HTTP/1.1" 200 OK
+agent-1  | INFO:     172.21.0.6:44572 - "POST /chat HTTP/1.1" 200 OK

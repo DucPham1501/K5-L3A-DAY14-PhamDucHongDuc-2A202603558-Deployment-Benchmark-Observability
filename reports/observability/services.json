@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "k5-day14-observability-agent-1",
+    "Image": "k5-day14-observability-agent",
+    "State": "running",
+    "Health": "healthy",
+    "Ports": "8000/tcp",
+    "Service": "agent"
+  },
+  {
+    "Name": "k5-day14-observability-grafana-1",
+    "Image": "grafana/grafana:13.2.4",
+    "State": "running",
+    "Health": "",
+    "Ports": "0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp",
+    "Service": "grafana"
+  },
+  {
+    "Name": "k5-day14-observability-jaeger-1",
+    "Image": "jaegertracing/jaeger:2.23.0",
+    "State": "running",
+    "Health": "",
+    "Ports": "0.0.0.0:4318->4318/tcp, [::]:4318->4318/tcp, 0.0.0.0:16686->16686/tcp, [::]:16686->16686/tcp",
+    "Service": "jaeger"
+  },
+  {
+    "Name": "k5-day14-observability-locust-1",
+    "Image": "locustio/locust:2.47.0",
+    "State": "running",
+    "Health": "",
+    "Ports": "0.0.0.0:8089->8089/tcp, [::]:8089->8089/tcp",
+    "Service": "locust"
+  },
+  {
+    "Name": "k5-day14-observability-nginx-1",
+    "Image": "nginx:1.28-alpine",
+    "State": "running",
+    "Health": "",
+    "Ports": "0.0.0.0:8080->80/tcp, [::]:8080->80/tcp",
+    "Service": "nginx"
+  },
+  {
+    "Name": "k5-day14-observability-prometheus-1",
+    "Image": "prom/prometheus:v3.16.0",
+    "State": "running",
+    "Health": "",
+    "Ports": "0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp",
+    "Service": "prometheus"
+  }
+]

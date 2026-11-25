@@ -1,0 +1,41 @@
+{
+  "ran_at_utc": "2026-11-25T09:34:49.715972+00:00",
+  "images": {
+    "develop": {
+      "bytes": 426320021,
+      "image_id": "sha256:bb7f3b7721389797f370913a2b8cc5ed622b734a33625090689bbe38ba411e75"
+    },
+    "advanced": {
+      "bytes": 57409069,
+      "image_id": "sha256:11742c76523a730db15ac4d6f5313aa5c9318a54d978260b89319dfaa907578e"
+    }
+  },
+  "reduction_percent": 86.53380883559302,
+  "develop_api": {
+    "method": "POST",
+    "path": "/ask?question=What%20is%20Docker",
+    "status": 200,
+    "body": {
+      "answer": "Container là cách đóng gói app để chạy ở mọi nơi. Build once, run anywhere!"
+    }
+  },
+  "nginx_health": {
+    "method": "GET",
+    "path": "/health",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "uptime_seconds": 2.2,
+      "version": "2.0.0",
+      "timestamp": "2026-11-25T09:34:46.859531"
+    }
+  },
+  "nginx_ask": {
+    "method": "POST",
+    "path": "/ask",
+    "status": 200,
+    "body": {
+      "answer": "Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé."
+    }
+  }
+}

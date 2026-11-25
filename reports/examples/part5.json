@@ -1,0 +1,85 @@
+{
+    "ran_at_utc":  "2026-11-25T09:49:30.112530+00:00",
+    "checks":  [
+                   {
+                       "method":  "GET",
+                       "path":  "/health",
+                       "status":  200,
+                       "body":  {
+                                    "status":  "ok",
+                                    "uptime_seconds":  0.9,
+                                    "version":  "1.0.0",
+                                    "environment":  "development",
+                                    "timestamp":  "2026-11-25T09:49:33.419004+00:00",
+                                    "checks":  {
+                                                   "memory":  {
+                                                                  "status":  "ok",
+                                                                  "used_percent":  13.4
+                                                              }
+                                               }
+                                }
+                   },
+                   {
+                       "method":  "GET",
+                       "path":  "/ready",
+                       "status":  200,
+                       "body":  {
+                                    "ready":  true,
+                                    "in_flight_requests":  1
+                                }
+                   },
+                   {
+                       "method":  "POST",
+                       "path":  "/ask?question=Hello",
+                       "status":  200,
+                       "body":  {
+                                    "answer":  "Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ OpenAI/Anthropic."
+                                }
+                   }
+               ],
+    "sigterm_exit_code":  0,
+    "limitation":  "Idle shutdown only; in-flight shutdown tested by Part 6 checker.",
+    "stateless_output_file":  "reports/examples/part5-stateless.log",
+    "services":  [
+                     {
+                         "Name":  "k5-day14-scaling-agent-1",
+                         "Image":  "k5-day14-scaling-agent",
+                         "State":  "running",
+                         "Health":  "starting",
+                         "Ports":  "8000/tcp",
+                         "Service":  "agent"
+                     },
+                     {
+                         "Name":  "k5-day14-scaling-agent-2",
+                         "Image":  "k5-day14-scaling-agent",
+                         "State":  "running",
+                         "Health":  "starting",
+                         "Ports":  "8000/tcp",
+                         "Service":  "agent"
+                     },
+                     {
+                         "Name":  "k5-day14-scaling-agent-3",
+                         "Image":  "k5-day14-scaling-agent",
+                         "State":  "running",
+                         "Health":  "starting",
+                         "Ports":  "8000/tcp",
+                         "Service":  "agent"
+                     },
+                     {
+                         "Name":  "k5-day14-scaling-nginx-1",
+                         "Image":  "nginx:alpine",
+                         "State":  "running",
+                         "Health":  "",
+                         "Ports":  "0.0.0.0:8080-\u003e80/tcp, [::]:8080-\u003e80/tcp",
+                         "Service":  "nginx"
+                     },
+                     {
+                         "Name":  "k5-day14-scaling-redis-1",
+                         "Image":  "redis:7-alpine",
+                         "State":  "running",
+                         "Health":  "healthy",
+                         "Ports":  "6379/tcp",
+                         "Service":  "redis"
+                     }
+                 ]
+}

@@ -1,0 +1,10 @@
+2026-11-25T13:11:25.115Z
+https://agent-production-36599cd4.up.railway.app
+GET /health health: HTTP 200 expected 200 PASS
+{"status":"ok"}
+GET /ready ready: HTTP 200 expected 200 PASS
+{"status":"ready"}
+POST /ask ask_without_key: HTTP 401 expected 401 PASS
+{"detail":"Invalid or missing API key"}
+POST /ask ask_with_key: HTTP 200 expected 200 PASS
+{"question":"Hello","answer":"Đây là câu trả lời từ AI agent (mock). Trong production, đây sẽ là response từ OpenAI/Anthropic.","usage":{"input_tokens":1,"output_tokens":24,"cost_usd":1.455e-05}}
